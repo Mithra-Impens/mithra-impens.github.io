@@ -19,7 +19,7 @@
       --glow:rgba(30, 83, 255, 0.603);
     }
 
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;font-size: 16px;}
     body{background:var(--bg);color:var(--text);overflow-x:hidden}
 
     /* CURSOR */
@@ -29,7 +29,7 @@
     nav{position:fixed;top:0;width:100%;padding:1rem 8%;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.7);backdrop-filter:blur(10px);z-index:1000}
     nav h1{color:var(--blue);letter-spacing:2px}
     nav ul{display:flex;gap:2rem;list-style:none}
-    nav ul li a{color:var(--text);text-decoration:none;position:relative}
+    nav ul li a{color:var(--text);text-decoration:none;position:relative;font-size: 1.1rem;}
     nav ul li a::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--blue);transition:.4s}
     nav ul li a:hover::after{width:100%}
 
@@ -39,27 +39,28 @@
     section{min-height:100vh;padding:7rem 8%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
 
     /* HOME */
-    #home h2{font-size:3.2rem}
+    #home h2{font-size: 3.8rem}
+    #home h2 span{font-size: inherit;font-weight: inherit;}
     #home span{color:var(--blue)}
     .typing{border-right:3px solid var(--blue);padding-right:5px}
 
     .home-links{margin-top:2rem;display:flex;gap:1.5rem;flex-wrap:wrap}
 
-    .btn{padding:.9rem 2.2rem;border:2px solid var(--blue);border-radius:50px;background:transparent;color:var(--text);cursor:pointer;position:relative;overflow:hidden;transition:.3s}
+    .btn{padding:.9rem 2.2rem;border:2px solid var(--blue);border-radius:50px;background:transparent;color:var(--text);cursor:pointer;position:relative;overflow:hidden;transition:.3s;font-size: 1.05rem;}
     .btn:hover{background-color: #1e90ff;}
     .btn:hover::before{left:0}
-    .btn:hover{color:#000;box-shadow:0 0 25px var(--glow);transform:translateY(-4px)}
+    .btn:hover{color:#000;box-shadow:0 0 25px var(--glow);transform:translateY(-2px)}
     .btn:active{transform:scale(.95)}
 
     /* CARDS */
-    .card{background:rgba(255,255,255,.04);padding:2.5rem;border-radius:18px;max-width:800px;box-shadow:0 0 35px rgba(30,144,255,.25);opacity:0;transform:translateY(40px);transition:1s}
+    .card{background:rgba(255,255,255,.04);padding:2.5rem;border-radius:18px;max-width:800px;box-shadow:0 0 40px rgba(30,144,255,.25);opacity:0;transform:translateY(40px);transition:1s}
     .card.show{opacity:1;transform:translateY(0)}
-    h3{color:var(--blue);margin-bottom:1rem}
-    p{opacity:.9;line-height:1.7}
+    h3{color:var(--blue);margin-bottom:1rem;font-size: 2rem;}
+    p{opacity:.9;line-height:1.8;font-size: 1.1rem;}
 
     /* SKILLS */
     .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1.2rem;margin-top:1.5rem}
-    .skill{padding:1rem;border:1px solid var(--blue);border-radius:12px;transition:.3s}
+    .skill{padding:1rem;border:1px solid var(--blue);border-radius:12px;transition:.3s;font-size: 1.05rem;}
     .skill:hover{background:var(--blue);color:#000;transform:translateY(-6px)}
 
     /* CONTACT */
@@ -75,6 +76,7 @@
       nav ul.active{right:0}
       .menu{display:block}
       #home h2{font-size:2.3rem}
+      p{font-size: 1rem}
     }
   </style>
 </head>
@@ -97,12 +99,12 @@
 </nav>
 
 <section id="home">
-  <h2>Hi, I'm <span>Mithra Impens</span><br><span class="typing"></span></h2>
+  <h2>Hi, I'm <span> Mithra Impens </span><br><span class="typing"></span></h2>
   <p>B.Tech IT Graduate | Java & Full Stack Developer</p>
   <div class="home-links">
     <a class="btn" href="https://github.com/Mithra-Impens" target="_blank"><i class="fab fa-github"></i> GitHub</a>
     <a class="btn" href="https://www.linkedin.com/in/mithra-impens-32b510288" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    <a class="btn" href="img/MITHRAIMPENScv.pdf"><i class="fas fa-download"></i>Resume</a>
+    <a class="btn" href="img/MITHRAIMPENScv.pdf" download><i class="fas fa-download"></i>Resume</a>
 
   </div>
 </section>
@@ -114,7 +116,7 @@ offboarding ticketing tool, AI-powered diet planner and actively participated in
 competitions. Eager to grow in dynamic tech environments with a keen interest in AI
 and emerging technologies.</p></div></section>
 
-<section id="education"><div class="card"><h3>Education</h3><p>B.Tech – Information Technology<br>Rajiv Gandhi College of Engineering and Technology | Pondicherry University | 2025 <br>First class Distinction </p></div></section>
+<section id="education"><div class="card"><h3>Education</h3><p>B.Tech – Information Technology<br>Rajiv Gandhi College of Engineering and Technology | Pondicherry University <br> 2025 <br>First class Distinction </p></div></section>
 
 <section id="course"><div class="card"><h3>Course</h3><p>Advanced Diploma in Full Stack Development<br>CSC Institute | 2024-2025 <br>Grade A</p></div></section>
 
@@ -129,7 +131,35 @@ calorie content.
 - Implemented BMI calculation based on user height and weight to personalize diet
 plans.</p><br></div></section>
 
-<section id="contact"><div class="card"><h3>Contact</h3><form><input placeholder="Name"><input placeholder="Email"><textarea rows="4" placeholder="Message"></textarea><button class="btn">Send</button></form></div></section>
+<section id="contact">
+  <div class="card">
+    <h3>Contact</h3>
+
+    <form 
+  id="contactForm"
+  onsubmit="submitForm(event)"
+>
+
+    
+
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" rows="4" placeholder="Message" required></textarea>
+      <button class="btn" type="submit">Send</button>
+
+    </form>
+
+    <!-- Success message (hidden by default) -->
+    <p 
+      id="successMsg"
+      style="margin-top:1rem; opacity:0.7; display:none;"
+    >
+      📩 Thanks for reaching out! I’ll reply soon.
+    </p>
+
+  </div>
+</section>
+
 
 <script>
   /* TYPING */
@@ -158,7 +188,36 @@ plans.</p><br></div></section>
 
   /* MENU */
   document.querySelector('.menu').onclick = () => document.querySelector('nav ul').classList.toggle('active');
+
+function submitForm(event) {
+  event.preventDefault(); // stop page redirect
+
+  const form = document.getElementById("contactForm");
+  const data = new FormData(form);
+
+  fetch("https://formspree.io/f/xlgbqgyg", {
+    method: "POST",
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      form.style.display = "none";
+      document.getElementById("successMsg").style.display = "block";
+    } else {
+      alert("❌ Something went wrong. Please try again.");
+    }
+  })
+  .catch(error => {
+    alert("❌ Network error. Please try later.");
+  });
+}
 </script>
+
 
 </body>
 </html>
+
+
